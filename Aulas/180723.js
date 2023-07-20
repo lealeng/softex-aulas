@@ -46,7 +46,7 @@ function exercicio3() {
     
     const numero = prompt("Digite aqui um número inteiro positivo: ");
 
-    if (numero === 5) {
+    if (numero === 0) {
         console.log("O número digitado é 0, digite novamente!");
         return exercicio3();
     } else if (numero < 0) {
@@ -87,8 +87,24 @@ function exercicio4() {
       const numeros = [10, 20, 30, 40, 50];
       const mediaAritmetica = calcularMediaAritmetica(numeros);
       console.log("Média aritmética:", mediaAritmetica); // Saída: 30
-      
 }
+
+    function exercicio5() {
+        let pedindo = true;
+        let numeros = [];
+        while (pedindo) {
+          const numero = prompt("Digite um número ou digite 'sair' para finalizar: ");
+          if (numero === "sair") {
+            pedindo = false;
+          } else {
+            numeros.push(numero);
+          }
+        }
+        let media = numeros.reduce((a, b) => +a + +b, 0) / numeros.length;
+        console.log(`A média dos números digitados é ${media}`);
+      } 
+    
+
 
 exercicio4();
 
