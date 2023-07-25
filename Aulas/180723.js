@@ -120,25 +120,7 @@ function testarPrimo(numero) {
 /* Escreva uma função em JavaScript que receba um array
 de números e retorne a média aritmética desses números. */
 
-function exercicio4() {
-    
-    function calcularMediaAritmetica(arrayDeNumeros) {
-        if (arrayDeNumeros.length === 0) {
-          return 0; // Retorna 0 se o array estiver vazio para evitar divisão por zero
-        }
-      
-        const soma = arrayDeNumeros.reduce((acumulador, numero) => acumulador + numero, 0);
-        const media = soma / arrayDeNumeros.length;
-        return media;
-      }
-      
-      // Exemplo de uso da função
-      const numeros = [10, 20, 30, 40, 50];
-      const mediaAritmetica = calcularMediaAritmetica(numeros);
-      console.log("Média aritmética:", mediaAritmetica); // Saída: 30
-}
-
-    function exercicio5() {
+    function exercicio4() {
         let pedindo = true;
         let numeros = [];
         while (pedindo === true) {
@@ -155,7 +137,7 @@ function exercicio4() {
     
 
 
-exercicio5();
+menuExercicio();
 
 
 
