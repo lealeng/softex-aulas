@@ -41,5 +41,22 @@ function exercicio5() {
     }
 }
 
+function exercicio6() {
+    let pedindo = true;
+    let numeros = [];
+    while (pedindo === true) {
+        const numero = prompt("Digite um número ou digite 'sair' para finalizar a aplicação: ");
+        if (numero === "sair") {
+            pedindo = false;
+        } else {
+            numeros.push(numero);
+        }
+    }
+    let media = numeros.reduce((a, b) => +a + +b, 0) / numeros.length;
+    console.log("A média dos números digitados é " + media); 
+}
 
-exercicio5();
+function exercicio7() {
+    
+}
+exercicio6();
