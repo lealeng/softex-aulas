@@ -58,4 +58,8 @@ function exercicio4() {
     console.log(`Até mais!`);
   }
 }
-exercicio4();
+
+/* 5. Verifique se uma string é um palíndromo (lê-se da mesma forma de trás para frente). */
+function exercicio5() {
+}
+exercicio5();
