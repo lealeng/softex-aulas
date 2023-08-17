@@ -37,9 +37,9 @@ function exercicio3() {
 }
 
 function exercicio4() {
-  const numero = 15;
+  const numero = 11;
 
-  if (numero % 2 === 2) {
+  if (numero % 2 === 0) {
     console.log(`Esse número não é PRIMO.`);
   } else {
     console.log(`Esse número é primo! `);
