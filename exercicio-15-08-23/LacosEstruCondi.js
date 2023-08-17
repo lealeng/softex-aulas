@@ -28,4 +28,21 @@ function exercicio2() {
     }
   }
 }
-exercicio2();
+
+/* 3. Implemente a sequência de Collatz: comece com um número n e,
+se n for par, divida-o por 2; se for ímpar, multiplique por 3 e some 1. 
+Repita o processo até n se tornar 1. */
+function exercicio3() {
+  //FALTA}
+}
+
+function exercicio4() {
+  const numero = 15;
+
+  if (numero % 2 === 2) {
+    console.log(`Esse número não é PRIMO.`);
+  } else {
+    console.log(`Esse número é primo! `);
+  }
+}
+exercicio4();
