@@ -33,7 +33,15 @@ function exercicio2() {
 se n for par, divida-o por 2; se for ímpar, multiplique por 3 e some 1. 
 Repita o processo até n se tornar 1. */
 function exercicio3() {
-  //FALTA}
+  let n = 6;
+  while (n !== 1) {
+    if (n % 2 === 0) {
+      n = n / 2;
+    } else {
+      n = n * 3 + 1;
+    }
+    console.log(n);
+  }
 }
 
 function exercicio4() {
@@ -45,4 +53,4 @@ function exercicio4() {
     console.log(`Esse número é primo! `);
   }
 }
-exercicio4();
+exercicio3();

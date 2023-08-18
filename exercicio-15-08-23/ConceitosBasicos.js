@@ -52,21 +52,16 @@ function exercicio3() {
 
 /* 4. Crie uma função que receba um array de números e retorne a média deles. */
 function exercicio4() {
-  let solicita = true;
-  let numeros = [];
-  while (solicita) {
-    const numero = parseInt(
-      prompt(
-        `Digite números para criar um array e para finalizar digite "sair".\n`
-      )
-    );
-    if (numero === "sair") {
-      solicita = false;
-    } else {
-      numeros.push(numero);
-    }
-    //FALTA
+  let numeros = [10, 20, 30, 40];
+  let quantidade = numeros.length;
+  let soma = 0;
+
+  for (let i = 0; i < numeros.length; i++) {
+    let elemento = numeros[i];
+    soma = soma + elemento;
   }
+  const media = soma / quantidade;
+  console.log(media);
 }
 
 /* 5. Crie uma função que remova elementos duplicados de um array. */
@@ -106,4 +101,4 @@ function exercicio6b() {
   console.log(`O resultado é: ${array}`);
 }
 
-exercicio6b();
+exercicio4();
