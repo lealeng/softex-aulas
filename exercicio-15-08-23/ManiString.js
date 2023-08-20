@@ -1,9 +1,24 @@
 const prompt = require("prompt-sync")();
 
 /* 1. Conte quantas vogais há em uma string */
-function exercicio1() {
-  //FALTA
+function contarVogais(str) {
+  const vogais = "aeiouAEIOU";
+  let contar = 0;
+
+  for (let char of str) {
+    if (vogais.includes(char)) {
+      //tag inclues para contar as vogais.
+      contar++;
+    }
+  }
+
+  return contar;
 }
+
+const nomeValidar = "hello world";
+contarVogais = contarVogais(nomeValidar);
+
+console.log(contarVogais);
 
 /* 2. Converta uma string para maiúsculas. */
 function exercicio2() {
@@ -31,4 +46,3 @@ function exercicio4() {
   }
   console.log(`A quantidade de letras "${letra}" na palavra é: ${contador}`);
 }
-exercicio4();
