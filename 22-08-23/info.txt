@@ -1,0 +1,8 @@
+Tags HTML
+<html>
+<head> cabeçalho
+<body> corpo
+<div> css (bloco visual)
+
+<p> paragrafo
+<h1> <h2> <h3>
