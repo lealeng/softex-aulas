@@ -1,6 +1,13 @@
 html {
-    height: 100%;
-    width: 100%;
-    background-color: red;
-    color: white;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(175, 29, 29);
+  color: white;
+}
+
+#minha-lista {
+  height: 10%;
+  width: 40%;
+  border-radius: 10px;
+  background-color: rgb(142, 137, 137);
 }
