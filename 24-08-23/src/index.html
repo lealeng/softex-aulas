@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocV LEAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../dist/server.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Locadora de Veículos LEAL</h1>
+    </header>
+
+    <main>
+      <div class="title">
+        <h2>Carros</h2>
+        <span>Lista de carros</span>
+      </div>
+
+      <div class="card">
+        <div class="lineInput">
+          <label>Carro:</label>
+          <input type="text" id="car" placeholder="Nome do carro" />
+        </div>
+
+        <div class="lineInput">
+          <label>Preço:</label>
+          <input type="text" id="price" placeholder="Preço do carro" />
+        </div>
+        <button onclick="car.save()">Salvar</button>
+        <button onclick="car.cancel()">Excluir</button>
+      </div>
+
+      <div class="content">
+        <table border="1">
+          <thead>
+            <th>ID</th>
+            <th>Carro</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
