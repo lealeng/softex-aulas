@@ -12,6 +12,7 @@ header {
   padding: 10px;
   color: rgb(0, 0, 0);
   text-align: center;
+  border-radius: 2px;
 }
 
 main {
