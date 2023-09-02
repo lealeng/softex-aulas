@@ -1,30 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <title>LocaVe</title>
   </head>
   <body>
-    <div
-      class="d-flex flex-column flex-md-row justify-content-between bg-info p-2 m-2"
-    >
-      <div class="bg-primary">
-        <p>Coluna 1</p>
+    <h1 class="text-center bg-warning bg-gradient">
+      Locadora de Veículos Leal
+    </h1>
+    <div>
+      <div>
+        <h2>Cadastro de Veículos</h2>
+        <input
+          type="text"
+          id="placa-veiculo"
+          placeholder="Placa"
+          class="mx-1 mb-1 mt-1"
+        />
+        <input
+          type="text"
+          id="marca-veiculo"
+          placeholder="Marca"
+          class="mx-1 mb-1 mt-1"
+        />
+        <input
+          type="text"
+          id="modelo-veiculo"
+          placeholder="Modelo"
+          class="mx-1 mb-1 mt-1"
+        />
+        <input
+          type="number"
+          id="ano-veiculo"
+          placeholder="Ano"
+          class="mx-1 mb-1 mt-1"
+        />
+        <input
+          type="text"
+          id="cor-veiculo"
+          placeholder="Cor"
+          class="mx-1 mb-1 mt-1"
+        />
+        <input
+          type="number"
+          id="valor-veiculo"
+          placeholder="Valor"
+          class="mx-1 mb-1 mt-1"
+        />
+        <input
+          type="text"
+          id="categoria-veiculo"
+          placeholder="Categoria"
+          class="mx-1 mb-1 mt-1"
+        />
+        <button
+          id="cadastrar"
+          type="button"
+          class="btn btn-warning fw-bold mb-1 mx-1"
+        >
+          Cadastrar
+        </button>
       </div>
-      <div class="bg-danger">
-        <p>Coluna Central</p>
+      <div>
+        <h2>Veículos disponíveis</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="bg-success">#</th>
+              <th scope="col">Placa</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Modelo</th>
+              <th scope="col">Ano</th>
+              <th scope="col">Cor</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Categoria</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-veiculos-disponiveis"></tbody>
+        </table>
       </div>
-      <div class="bg-warning">
-        <p>Coluna 3</p>
+      <div>
+        <h2>Veículos Alugados</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="bg-danger">#</th>
+              <th scope="col">Placa</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Modelo</th>
+              <th scope="col">Ano</th>
+              <th scope="col">Cor</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Categoria</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-veiculos-alugados"></tbody>
+        </table>
       </div>
     </div>
+    <script type="module" src="./src/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
