@@ -19,17 +19,19 @@ const locadora = new Locadora();
 btnCadastrar.addEventListener("click", cadastrarVeiculo);
 document.addEventListener("click", (event) => {
   const idBtn = event.target.id;
+  console.log(idBtn);
   const textoBtn = event.target.textContent;
+  console.log(textoBtn);
   let index = "";
   switch (textoBtn) {
     case "Alugar":
       index = idBtn.replace("alugar[", "").replace("]", "");
+      console.log(idBtn);
       locadora.alugarVeiculo(Number(index));
       console.log(textoBtn);
       renderizaDisponiveis();
       renderizaAlugados();
       break;
-
     case "Devolver":
       index = idBtn.replace("devolver[", "").replace("]", "");
       locadora.devolverVeiculo(Number(index));
@@ -37,7 +39,6 @@ document.addEventListener("click", (event) => {
       renderizaDisponiveis();
       renderizaAlugados();
       break;
-
     case "Excluir":
       index = idBtn.replace("excluir[", "").replace("]", "");
       locadora.excluirVeiculo(Number(index));
@@ -45,13 +46,12 @@ document.addEventListener("click", (event) => {
       renderizaDisponiveis();
       renderizaAlugados();
       break;
-
     default:
       break;
   }
 });
 
-function cadastrarVeiculo() {
+function cadastrarVeiculo(event) {
   const veiculo = new Veiculo(
     placa.value,
     marca.value,
@@ -71,7 +71,7 @@ function renderizaDisponiveis() {
   veiculosDisponiveis.innerHTML = "";
   locadora.veiculos.forEach((element, index) => {
     if (element.disponivel) {
-      veiculosDisponiveis.innerHTML += `<tr> 
+      veiculosDisponiveis.innerHTML += `<tr>
         <th id="${index}" scope="row">${index + 1}</th>
         <td>${element.placa}</td>
         <td>${element.marca}</td>
@@ -80,7 +80,7 @@ function renderizaDisponiveis() {
         <td>${element.cor}</td>
         <td>${element.valor}</td>
         <td>${element.categoria}</td>
-        <td><button id="excluir[${index}]" class="btn btn-danger">Excluir</button> | <button id="alugar[${index}]" class="btn btn-success"> Alugar</button></td>
+        <td><button id="excluir[${index}]" class="btn btn-danger">Excluir</button> | <button id="alugar[${index}]" class="btn btn-success">Alugar</button></td>
         </tr>`;
     }
   });

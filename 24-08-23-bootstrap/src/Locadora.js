@@ -2,8 +2,8 @@ import { Veiculo } from "./Veiculos.js";
 
 export class Locadora extends Veiculo {
   veiculos;
-  constructor(placa, marca, modelo, cor, ano, categoria, valor, disponivel) {
-    super(placa, marca, modelo, cor, ano, categoria, valor, disponivel);
+  constructor(placa, marca, modelo, cor, ano, categoria, valor) {
+    super(placa, marca, modelo, cor, ano, categoria, valor);
     this.veiculos = [];
   }
 
