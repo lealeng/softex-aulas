@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
+model Product {
+  id            Int      @id @default(autoincrement())
+  codBars       String   @unique
+  name          String
+  idCategory    Int      @default(0)
+  idSubcategory Int      @default(0)
+  supplier      String
+  price         Decimal
+  activated     Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now())
+
+  category    Category    @relation(fields: [idCategory], references: [id])
+  subcategory SubCategory @relation(fields: [idSubcategory], references: [id])
+}
+
+model Category {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  activated Boolean @default(true)
+
+  subcategories SubCategory[]
+  Product       Product[]
+}
+
+model SubCategory {
+  id         Int       @id @default(autoincrement())
+  name       String    @unique
+  categoryId Int
+  category   Category  @relation(fields: [categoryId], references: [id])
+  Product    Product[]
+}
