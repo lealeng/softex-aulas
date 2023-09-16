@@ -2,7 +2,6 @@ import { FastifyInstance } from 'fastify'
 import { prisma } from '../lib/prisma'
 import { z } from 'zod'
 import bcrypt from 'bcrypt'
-import { request } from 'http'
 
 export async function usersRoutes(app: FastifyInstance) {
   app.post('/users', async (request, reply) => {
