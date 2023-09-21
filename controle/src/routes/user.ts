@@ -31,7 +31,7 @@ export async function usersRoutes(app: FastifyInstance) {
         },
       })
 
-      const { password: passwordOut, ...user } = users
+      const { password: _, ...user } = users
 
       return reply.status(201).send(user)
     } catch (error) {
