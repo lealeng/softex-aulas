@@ -1,0 +1,27 @@
+{
+  "name": "crud-mkt",
+  "version": "1.0.0",
+  "description": "npm init -y\r npm i typescript -D\r npm i @types/node -D\r npx tsc --init\r npm i tsx -D",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/node": "^20.8.2",
+    "eslint": "^8.50.0",
+    "prisma": "^5.4.1",
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.4.1",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.23.0",
+    "zod": "^3.22.4"
+  }
+}
