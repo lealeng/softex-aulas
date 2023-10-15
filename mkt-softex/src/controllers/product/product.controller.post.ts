@@ -36,7 +36,7 @@ class ProductControllerPost {
                 }
             })
 
-            return res.status(200).json(product)
+            return res.status(201).json(product)
         } catch (error) {
             return res.status(500).json({ message: "Erro ao criar o produto, tente novamente" });
         }
