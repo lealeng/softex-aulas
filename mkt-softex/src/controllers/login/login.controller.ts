@@ -28,7 +28,13 @@ class LoginController {
             }
 
             const token = jwt.sign({ id: user.id}, process.env.JWT_PASS ?? '', { expiresIn: '8h'})
-            console.log(token);
+            
+            const {password:_, ...userLogin} = user
+
+            return res.json({
+                user: userLogin,
+                token: token
+            })
 
         } catch (error) {
             return res.status(500).json({ message: 'Erro ao validar login'})
