@@ -26,10 +26,9 @@ class ProductControllerGet {
         id: z.string(),
       });
       const { id } = paramsSchema.parse(req.params);
-      const idProduct = parseInt(id, 10);
       const product = await prisma.product.findUniqueOrThrow({
         where: {
-          id: idProduct,
+          id: parseInt(id),
         },
       });
 

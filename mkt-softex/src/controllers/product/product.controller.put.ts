@@ -10,7 +10,6 @@ class ProductControllerPut {
             })
 
             const { id } = paramsSchema.parse(req.params)
-            const idProduct = parseInt(id, 10)
 
             const bodySchema = z.object({
                 codBars: z.string(),
@@ -33,7 +32,7 @@ class ProductControllerPut {
 
             const product = await prisma.product.update({
                 where: {
-                    id: idProduct,
+                    id: parseInt(id),
                 },
                 data: {
                     codBars,
