@@ -1,22 +1,14 @@
 import express, { Router } from "express";
-import { producRoutes } from "./routes/product.routes";
 import { userRoutes } from "./routes/user.routes";
 import { loginRoutes } from "./routes/login.routes";
+import { productRoutes } from "./routes/product.routes";
 
 const app = express();
 
 app.use(express.json());
 
-
-// Rotas usuários
-app.use(producRoutes())
-app.use(userRoutes())
-app.use(loginRoutes())
-
-
-// Rotas produtos
-
-
+app.use(userRoutes());
+app.use(loginRoutes());
+app.use(productRoutes());
 
 export default app;
-

@@ -14,6 +14,7 @@ class ProductControllerPost {
         subCategoryId: z.number(),
         userId: z.number(),
       });
+
       const {
         codBars,
         name,
@@ -31,7 +32,6 @@ class ProductControllerPost {
       if (codBarsExists) {
         return res.status(400).json("O código de barras já existe.");
       }
-
       const products = await prisma.product.create({
         data: {
           codBars,
@@ -43,9 +43,6 @@ class ProductControllerPost {
           userId,
         },
       });
-
-      console.log(products);
-
       return res.status(201).json(products);
     } catch (error) {
       return res
