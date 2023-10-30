@@ -4,15 +4,14 @@ import productControllerPost from "../controllers/product/product.controller.pos
 import productControllerPut from "../controllers/product/product.controller.put";
 import productControllerDelete from "../controllers/product/product.controller.delete";
 
-export const producRoutes = (): Router => {
-    const router = Router();
+export const productRoutes = (): Router => {
+  const router = Router();
 
-    router.get('/products', productControllerGet.listProducts)
-    router.get('/products/:id', productControllerGet.listProductId)
-    router.post('/products', productControllerPost.createProduct)
-    router.put('/products', productControllerPut.updateProduct)
-    router.delete('/products', productControllerDelete.deleteProduct)
+  router.get("/products", productControllerGet.listProducts);
+  router.get("/products/:id", productControllerGet.listProductId);
+  router.post("/products", productControllerPost.createProduct);
+  router.put("/products", productControllerPut.updateProduct);
+  router.delete("/products", productControllerDelete.deleteProduct);
 
-
-    return router;
-}
+  return router;
+};

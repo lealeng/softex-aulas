@@ -7,10 +7,8 @@ import { authMiddlewares } from "../middlewares/auth.middlewares";
 export const loginRoutes = (): Router => {
     const router = Router();
 
-    router.use(authMiddlewares)
-
     router.post('/login', loginController.login)
-    router.get('/profile', profileController.getProfile)
+    router.get('/profile', authMiddlewares, profileController.getProfile)
 
     return router;
 }
